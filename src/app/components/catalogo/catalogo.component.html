@@ -1,0 +1,21 @@
+<div class="container text-center mt-2">
+    <div align="right">
+        <input class="form-control me-2" type="text" placeholder="Search" style="width: 200px;" [(ngModel)]="filtro"
+            name="filtro">
+    </div>
+    <div class="spinner-border" role="status" *ngIf="loaddata">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="row">
+        <div class="col"
+            *ngFor="let pokemon of catalogo | filter: filtro | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
+            <div class="pokemonselect" [routerLink]="['/detalle',pokemon.id]">
+                <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+                <h5>{{pokemon.name | titlecase}}</h5>
+                <h6>{{pokemon.types[0].type.name | titlecase}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pagination-controls class="container text-center mt-2" (pageChange)="page = $event; catalogo = []; getCatalogo()"></pagination-controls>

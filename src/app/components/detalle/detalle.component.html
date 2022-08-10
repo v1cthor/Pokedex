@@ -1,0 +1,82 @@
+<div align="center" class="container">
+    <div align="left">
+        <button type="button" class="btn btn-outline-success" [routerLink]="['/detalle']">Regresar</button>
+    </div>
+    <div>
+        <img [src]="img" alt="" width="250px">
+        <h2>{{name | titlecase}}</h2>
+
+        <span class="badge text-bg-primary">{{ type | titlecase}}</span>
+
+
+
+        <div class="container text-center mt-4">
+            <div class="row">
+                <div class="col mt-2">
+
+                    <b>Hp: </b>{{hp}}
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label"
+                            [style.width]="hp+'%'" aria-valuenow="hp" aria-valuemin="0" aria-valuemax="100">{{hp}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <b>Attack: </b>{{Attack}}
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-label="Example with label"
+                            [style.width]="Attack+'%'" aria-valuenow="hp" aria-valuemin="0" aria-valuemax="100">
+                            {{Attack}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <b>Defense: </b>{{Defense}}
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" aria-label="Example with label"
+                            [style.width]="Defense+'%'" aria-valuenow="hp" aria-valuemin="0" aria-valuemax="100">
+                            {{Defense}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <b>Special attack: </b>{{Special_attack}}
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Example with label"
+                            [style.width]="Special_attack+'%'" aria-valuenow="hp" aria-valuemin="0" aria-valuemax="100">
+                            {{Special_attack}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <b>Special defense: </b>{{Special_defense}}
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Example with label"
+                            [style.width]="Special_defense+'%'" aria-valuenow="hp" aria-valuemin="0"
+                            aria-valuemax="100">{{Special_defense}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <b>Speed: </b>{{Speed}}
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label"
+                            [style.width]="Speed+'%'" aria-valuenow="hp" aria-valuemin="0" aria-valuemax="100">{{Speed}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>

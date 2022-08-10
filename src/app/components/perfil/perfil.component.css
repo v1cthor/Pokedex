@@ -1,0 +1,30 @@
+.imgPerfil {
+    width: 350px;
+    border-radius: 60%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.borderContent {
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+.total {
+    
+    height: 180px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.unico {
+    width: 320px;
+    margin-top: 2%;
+}
